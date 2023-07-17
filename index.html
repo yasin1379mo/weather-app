@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search">
+        <input id="searchBox" type="text" placeholder="Enter City Name" />
+        <button><img src="pics/search.png" /></button>
+        <div class="autocomplete" id="autocomplete" style="display: none">
+          <button class="city-guess" id="city-guess1"></button><br />
+          <button class="city-guess" id="city-guess2"></button><br />
+          <button class="city-guess" id="city-guess3"></button><br />
+        </div>
+      </div>
+      <div class="error" style="display: none">
+        <p>Invalid City Name</p>
+      </div>
+      <div class="weather-load" style="display: none">
+        <div class="dot-spinner">
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+        </div>
+      </div>
+      <div class="weather" style="display: none">
+        <img src="" class="weather-icon" />
+        <h1 class="temp">35&deg;</h1>
+        <h2 class="city">Canada</h2>
+        <div class="details">
+          <div class="col">
+            <img src="pics/humidity.png" />
+            <div>
+              <p class="humidity">20%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="pics/wind.png" />
+            <div>
+              <p class="wind">10KM/H</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="forecast-mode">
+      <div class="errorForecast" style="display: none">
+        we are truly sorry that we could not find any forecast information for
+        this city
+      </div>
+      <div class="loading-con" style="display: none">
+        <div class="loading-btn"></div>
+        <div class="loading-btn"></div>
+      </div>
+      <br />
+      <button id="dayBtn" style="display: none">daily forecast</button>
+      <button id="hourBtn" style="display: none">hourly forecast</button>
+    </div>
+
+    <div class="daily-forecast" style="display: none">
+      <!-- Daily Forecast Cards -->
+      <div class="card">
+        <img src="" class="forecastImgs" id="day-img0" /><br />
+        <div class="day" id="card0-day"></div>
+        <div id="card0-temp"></div>
+      </div>
+      <div class="card">
+        <img src="" class="forecastImgs" id="day-img1" /><br />
+        <div class="day" id="card1-day"></div>
+        <div id="card1-temp"></div>
+      </div>
+      <!-- Add more daily forecast cards dynamically -->
+    </div>
+
+    <div class="hourly-forecast" style="display: none">
+      <!-- Hourly Forecast Cards -->
+      <div class="card">
+        <img src="" class="forecastImgs" id="hour-img0" /><br />
+        <div class="day">03:30</div>
+        <div id="card0-temp-hour"></div>
+      </div>
+      <div class="card">
+        <img src="" class="forecastImgs" id="hour-img1" /><br />
+        <div class="day">06:30</div>
+        <div id="card1-temp-hour"></div>
+      </div>
+      <!-- Add more hourly forecast cards dynamically -->
+    </div>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
